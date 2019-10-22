@@ -25,16 +25,6 @@ public:
 		m_material = mat;
 	}
 
-	void setBimMaterialID(int id)
-	{
-		m_bimMaterialID = id;
-	}
-
-	int getBimMaterialID() const
-	{
-		return m_bimMaterialID;
-	}
-
 	void setAreaLight(std::shared_ptr<AreaLight> l)
 	{
 		assert(m_material);
@@ -64,5 +54,4 @@ public:
 	virtual size_t estimateSize(size_t vertexSize) const = 0;
 private:
 	std::shared_ptr<Material> m_material;
-	int m_bimMaterialID = -1;
 };
