@@ -1,0 +1,3 @@
+[submodule "Source/epsilon"]
+	path = Source/epsilon
+	url = https://github.com/Jojendersie/Epsilon-Intersection.git

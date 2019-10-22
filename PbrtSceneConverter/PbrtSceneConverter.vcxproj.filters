@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\PBRT">
+      <UniqueIdentifier>{63e596d3-163e-40bd-aa08-a6ca21178ff2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\geometry">
+      <UniqueIdentifier>{0f6bec43-9754-47f0-bcd9-f3c3d156622a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\filedialog">
+      <UniqueIdentifier>{7b11fbd0-f2b7-4df3-8c5e-d3472833e88c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\rply">
+      <UniqueIdentifier>{6a7469ab-c358-404a-8ac7-ec68fc24e74d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\epsilon">
+      <UniqueIdentifier>{bdd39163-f7d4-4a87-af44-ca00b66cd08f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Source\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\parser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\PBRT\PbrtScene.cpp">
+      <Filter>Source Files\PBRT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\PBRT\ParamSet.cpp">
+      <Filter>Source Files\PBRT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\PBRT\spectrum.cpp">
+      <Filter>Source Files\PBRT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\PBRT\volume.cpp">
+      <Filter>Source Files\PBRT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\system.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\DialogOpenFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\filedialog\nfd_win.cpp">
+      <Filter>Source Files\filedialog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\filedialog\nfd_common.c">
+      <Filter>Source Files\filedialog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\rply\rply.cpp">
+      <Filter>Source Files\rply</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\Plymesh.cpp">
+      <Filter>Source Files\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SubdivisionHelper.cpp">
+      <Filter>Source Files\geometry</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Source\PBRT\PbrtScene.h">
+      <Filter>Source Files\PBRT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\epsilon\include\ei\2dintersection.hpp">
+      <Filter>Source Files\epsilon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\epsilon\include\ei\2dtypes.hpp">
+      <Filter>Source Files\epsilon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\epsilon\include\ei\3dintersection.hpp">
+      <Filter>Source Files\epsilon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\epsilon\include\ei\3dtypes.hpp">
+      <Filter>Source Files\epsilon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\epsilon\include\ei\configure.hpp">
+      <Filter>Source Files\epsilon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\epsilon\include\ei\defaultconfig.hpp">
+      <Filter>Source Files\epsilon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\epsilon\include\ei\elementarytypes.hpp">
+      <Filter>Source Files\epsilon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\epsilon\include\ei\stdextensions.hpp">
+      <Filter>Source Files\epsilon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\epsilon\include\ei\vector.hpp">
+      <Filter>Source Files\epsilon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\parser.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\raw_parser.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\parser_helper.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\parser_exception.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\PBRT\ParamSet.h">
+      <Filter>Source Files\PBRT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\geometry\Shape.h">
+      <Filter>Source Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\geometry\TriangleMesh.h">
+      <Filter>Source Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\geometry\Sphere.h">
+      <Filter>Source Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\PBRT\Material.h">
+      <Filter>Source Files\PBRT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\file.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\PBRT\spectrum.h">
+      <Filter>Source Files\PBRT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\PBRT\Light.h">
+      <Filter>Source Files\PBRT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\PBRT\TextureParams.h">
+      <Filter>Source Files\PBRT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\PBRT\volume.h">
+      <Filter>Source Files\PBRT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\PBRT\copper.h">
+      <Filter>Source Files\PBRT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\system.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\geometry\Plymesh.h">
+      <Filter>Source Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\DialogOpenFile.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\rply\rply.h">
+      <Filter>Source Files\rply</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Exception.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\ArgumentSet.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\geometry\LoopSubDiv.h">
+      <Filter>Source Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\geometry\SubdivisionHelper.h">
+      <Filter>Source Files\geometry</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
