@@ -9,8 +9,8 @@
 #include "ArgumentSet.h"
 
 const auto g_helpstring = 
-"arguments: input_pbrt output_core grid_resolution\n" \
-"e.g.: scenes/book.pbrt converted/book/book --pause\n"\
+"arguments: input_pbrt output [optional args]\n" \
+"e.g.: scenes/book.pbrt converted/book --pause\n"\
 "optional arguments:\n"\
 "		--pause (programm will pause after execution)\n"\
 "		--noconvert (this will just try to read the file without converting)\n"\
