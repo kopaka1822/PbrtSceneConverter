@@ -186,90 +186,6 @@ namespace util
 
 		template <class T>
 		static T convertString(const std::string& s) noexcept = delete;
-
-		template<>
-		static std::string convertString(const std::string& s) noexcept
-		{
-			return s;
-		}
-
-		template<>
-		static const char* convertString(const std::string& s) noexcept
-		{
-			return s.c_str();
-		}
-
-		template<>
-		static float convertString(const std::string& s) noexcept
-		{
-			try
-			{
-				return stof(s);
-			}
-			catch (const std::exception&)
-			{
-				return 0.0f;
-			}
-		}
-
-		template<>
-		static double convertString(const std::string& s) noexcept
-		{
-			try
-			{
-				return stod(s);
-			}
-			catch (const std::exception&)
-			{
-				return 0.0;
-			}
-		}
-
-		template<>
-		static bool convertString(const std::string& s) noexcept
-		{
-			if (s == "true")
-				return true;
-			return false;
-		}
-
-		template<>
-		static int convertString(const std::string& s) noexcept
-		{
-			try
-			{
-				return stoi(s);
-			}
-			catch(const std::exception&)
-			{
-				return 0;
-			}
-		}
-
-		template<>
-		static short convertString(const std::string& s) noexcept
-		{ 
-			return short(convertString<int>(s));
-		}
-
-		template<>
-		static char convertString(const std::string& s) noexcept
-		{
-			return char(convertString<int>(s));
-		}
-		
-		template<>
-		static long convertString(const std::string& s) noexcept
-		{
-			try
-			{
-				return stol(s);
-			}
-			catch (const std::exception&)
-			{
-				return 0;
-			}
-		}
 	private:
 		template<class F, class...Ts, std::size_t...Is>
 		void for_each_in_tuple(const std::tuple<Ts...> & tuple, F func, std::index_sequence<Is...>) {
@@ -288,4 +204,66 @@ namespace util
 		std::unordered_map<std::string, std::vector<std::string>> m_params;
 	};
 
+	template<>
+	inline std::string ArgumentSet::convertString(const std::string& s) noexcept {
+		return s;
+	}
+
+	template<>
+	inline const char* ArgumentSet::convertString(const std::string& s) noexcept {
+		return s.c_str();
+	}
+
+	template<>
+	inline float ArgumentSet::convertString(const std::string& s) noexcept {
+		try {
+			return stof(s);
+		} catch(const std::exception&) {
+			return 0.0f;
+		}
+	}
+
+	template<>
+	inline double ArgumentSet::convertString(const std::string& s) noexcept {
+		try {
+			return stod(s);
+		} catch(const std::exception&) {
+			return 0.0;
+		}
+	}
+
+	template<>
+	inline bool ArgumentSet::convertString(const std::string& s) noexcept {
+		if(s == "true")
+			return true;
+		return false;
+	}
+
+	template<>
+	inline int ArgumentSet::convertString(const std::string& s) noexcept {
+		try {
+			return stoi(s);
+		} catch(const std::exception&) {
+			return 0;
+		}
+	}
+
+	template<>
+	inline short ArgumentSet::convertString(const std::string& s) noexcept {
+		return short(ArgumentSet::convertString<int>(s));
+	}
+
+	template<>
+	inline char ArgumentSet::convertString(const std::string& s) noexcept {
+		return char(ArgumentSet::convertString<int>(s));
+	}
+
+	template<>
+	inline long ArgumentSet::convertString(const std::string& s) noexcept {
+		try {
+			return stol(s);
+		} catch(const std::exception&) {
+			return 0;
+		}
+	}
 }

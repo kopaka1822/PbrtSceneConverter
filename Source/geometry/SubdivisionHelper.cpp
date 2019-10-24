@@ -150,8 +150,8 @@ namespace subdiv {
 						int index;
 						if ((index = t2->containsEdge(t->v[enext], t->v[e])) >= 0)
 						{
-							t->t[e] = t2 - triangles_.begin();
-							t2->t[index] = t - triangles_.begin();
+							t->t[e] = static_cast<int>(t2 - triangles_.begin());
+							t2->t[index] = static_cast<int>(t - triangles_.begin());
 						}
 					}
 				}
@@ -179,7 +179,7 @@ namespace subdiv {
 		//	std::vector<int> oldVertexTriangle = vertexTriangle_;	
 		//	vertexTriangle_ = std::vector<int> ( vertices_.size()*6, -1 );
 
-		int oldVertSize = vertices_.size();
+		int oldVertSize = static_cast<int>(vertices_.size());
 
 		// use list to avoid stack overflow problem
 		splits_.clear();
@@ -216,7 +216,7 @@ namespace subdiv {
 
 		const Triangle& cur = triangles_[index];
 		Triangle tri[4];
-		int off = tmpTriangles_.size();
+		int off = static_cast<int>(tmpTriangles_.size());
 
 		if (callee < 0) {
 			sz = 3;
@@ -287,7 +287,7 @@ namespace subdiv {
 				ei::Vec3 p = (vertices_[cur.v[k]] + vertices_[cur.v[knext]]) * (3.0f / 8.0f) +
 					(vertices_[cur.v[kprev]] + vertices_[t.v[opposite]]) * (1.0f / 8.0f);
 				vertices_.push_back(p);
-				midPoints[indices[i]] = midPoints_[3 * index + indices[i]] = vertices_.size() - 1;
+				midPoints[indices[i]] = midPoints_[3 * index + indices[i]] = static_cast<int>(vertices_.size() - 1);
 				process[i] = true;
 			}
 		}
