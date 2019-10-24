@@ -145,10 +145,12 @@ void PbrtScene::apiTransformEnd()
 void PbrtScene::useTrans(const Matrix& m, bool concat)
 {
 	if(m_activeTransform.top())
-		if (concat)
+	{
+		if(concat)
 			m_transforms.top() *= m;
 		else
 			m_transforms.top() = m;
+	}
 }
 
 void PbrtScene::resetTransforms()
@@ -578,13 +580,16 @@ std::shared_ptr<Texture<T>> PbrtScene::makeTexture(const std::string& name, cons
 		if (typeid(T) == typeid(float))
 			return T(tp.getFloat(n, *reinterpret_cast<float*>(&def)));
 		else
-			return *reinterpret_cast<T*>(&tp.getSpectrum(n, def));
+		{
+			const Spectrum spectrum = tp.getSpectrum(n, def);
+			return *reinterpret_cast<const T*>(&spectrum);
+		}
 	};
 
 	std::shared_ptr<Texture<T>> tex = std::shared_ptr<Texture<T>>(new Texture<T>);
 	//tex->transform = toWorld;
 
-	auto type = Texture<T>::Type(getTextureTypeFromString(name));
+	auto type = typename Texture<T>::Type(getTextureTypeFromString(name));
 	tex->type = type;
 	switch (type)
 	{

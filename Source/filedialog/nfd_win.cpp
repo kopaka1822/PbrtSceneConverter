@@ -55,7 +55,6 @@ static size_t GetUTF8ByteCountForWChar( const wchar_t *str )
 // before entering this function.
 static int CopyWCharToExistingNFDCharBuffer( const wchar_t *inStr, nfdchar_t *outPtr )
 {
-    int inStrCharacterCount = static_cast<int>(wcslen(inStr));
     int bytesNeeded = static_cast<int>(GetUTF8ByteCountForWChar( inStr ));
 
     /* invocation copies null term */
@@ -160,7 +159,6 @@ static nfdresult_t AddFiltersToDialog( ::IFileDialog *fileOpenDialog, const char
     p_filterList = filterList;
     char typebuf[NFD_MAX_STRLEN] = {0};  /* one per comma or semicolon */
     char *p_typebuf = typebuf;
-    char filterName[NFD_MAX_STRLEN] = {0};
 
     char specbuf[NFD_MAX_STRLEN] = {0}; /* one per semicolon */
 
